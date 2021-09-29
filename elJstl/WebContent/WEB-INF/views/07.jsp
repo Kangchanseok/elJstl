@@ -21,7 +21,15 @@
     session name = <%=session.getAttribute("name") %> <br/>
     application name = <%=application.getAttribute("name") %> <br/>
 	
-	<h2>el</h2>                   
+	<h2>el</h2>   
+	<p>name: ${name }</p>   
+	<%-- 여러 영역에 같은 이름의 객체가 있을 때, scope 영역을 명시해야 한다 --%>            
+	<ul>
+		<li>page Scope: ${pageScope.name }</li>
+		<li>request Scope: ${requestScope.name }</li>
+		<li>session Scope: ${sessionScope.name }</li>
+		<li>application Scope: ${applicationScope.name }</li>
+	</ul>
 	
 
 
